@@ -1,0 +1,48 @@
+<section class="h-100 gradient-form" style="background-color: #eee;">
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-xl-6">
+          <div class="card rounded-3 text-black">
+            <div class="row g-0">
+              <div class="col-lg-12">
+                <div class="card-body p-md-8 mx-md-4">
+  
+                  <div class="text-center mt-3">
+                    <img src="https://mlbiylps3tca.i.optimole.com/cb:zu-k.19768/w:auto/h:auto/q:mauto/ig:avif/https://infobelt.com/wp-content/uploads/2024/08/infobelt-logo.svg"
+                      style="width: 160px;" alt="logo">
+                    <h6 class="mt-3 mb-5 pb-1">We are The Infobelt Team</h6>
+                  </div>
+  
+                  <form [formGroup]="postEmployeeForm">
+                    <div data-mdb-input-init class="form-outline mb-4">
+                      <input type="text" id="form2Example11" class="form-control"
+                        placeholder="Please enter your name" formControlName="name" required />
+                      <label class="form-label" for="form2Example11">Name</label>
+                    </div>
+  
+                    <div data-mdb-input-init class="form-outline mb-4">
+                      <input type="email" id="form2Example22" class="form-control" 
+                      placeholder="Please enter your personal email" formControlName="email" required/>
+                      <label class="form-label" for="form2Example22">email</label>
+                    </div>
+
+                    <div data-mdb-input-init class="form-outline mb-4">
+                        <input type="text" id="form2Example33" class="form-control"
+                          placeholder="Please enter your phone number" formControlName="phone" required/>
+                        <label class="form-label" for="form2Example33">Phone</label>
+                      </div>
+  
+                    <div class="text-center pt-1 mb-5 pb-1">
+                      <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" (click)="saveRegister()">Register</button>&nbsp;                    
+                      <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" (click)="getAllEmp()">All employees</button> 
+                    </div>  
+                  </form>
+  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

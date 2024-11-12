@@ -1,0 +1,38 @@
+    <section class="h-100 gradient-form">
+        <div class="container py-5 h-100">
+            <div class="text-center mt-3">
+                <img src="https://mlbiylps3tca.i.optimole.com/cb:zu-k.19768/w:auto/h:auto/q:mauto/ig:avif/https://infobelt.com/wp-content/uploads/2024/08/infobelt-logo.svg"
+                  style="width: 160px;" alt="logo">
+                <h6 class="mt-3 mb-5 pb-1">All the Employees</h6>
+              </div>
+          <div class="row d-flex justify-content-center align-items-center h-100">  
+            <div class="pt-1 pb-1">
+                <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" (click)="goBack()">Go Back</button>
+              </div>       
+    <table class="table table-bordered" style="margin-bottom: 1100px;">
+        <thead>
+          <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let emp of employees">
+            <td>{{emp.id}}</td>
+            <td>{{emp.name}}</td>
+            <td>{{emp.email}}</td>
+            <td>{{emp.phone}}</td>
+            <td> 
+                <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block fa-lg gradient-custom-3" type="button">Update</button>&nbsp;                    
+                <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block fa-lg gradient-custom-4" type="button">Delete</button> 
+              </td>
+          </tr>
+        </tbody>
+      </table>
+          </div>
+        </div>
+    </section>  
+
