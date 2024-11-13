@@ -11,6 +11,8 @@ import { EmployeeService } from 'src/app/service/employee.service';
 export class RegisterEmployeeComponent {
 
   postEmployeeForm!: FormGroup;
+  errorMsg:boolean = false;
+  successMsg: boolean = false;
 
   constructor(private employeeService: EmployeeService, 
     private fb:FormBuilder, private route: Router){}
@@ -23,17 +25,25 @@ export class RegisterEmployeeComponent {
     })
   }
    
-  saveRegister() {
+  saveRegister() {    
     const formValues = this.postEmployeeForm.value;
     const allFieldsFilled = Object.values(formValues).every(value => value !== null && value !== '')
     if (allFieldsFilled) {
         this.employeeService.registerEmployee(formValues).subscribe((res) => {
             console.log('Post response', res);
-            this.postEmployeeForm.reset();            
+            this.postEmployeeForm.reset();
+            this.successMsg = true;
+            this.errorMsg = false;           
         });
     } else {
-        alert("All fields must be filled before submitting.")
+       this.errorMsg = true;
+       this.successMsg = false;
     }
+  }
+  
+  errorCls(){
+    this.errorMsg = false;
+    this.successMsg = false;
   }
 
   getAllEmp(){

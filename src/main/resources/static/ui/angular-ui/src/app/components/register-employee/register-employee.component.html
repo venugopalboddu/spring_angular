@@ -36,8 +36,15 @@
                       <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" (click)="saveRegister()">Register</button>&nbsp;                    
                       <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" (click)="getAllEmp()">All employees</button> 
                     </div>  
-                  </form>
-  
+                    <div *ngIf="errorMsg" class="alert alert-danger alert-dismissible fade show" role="alert">
+                      All fields must be filled before submitting.
+                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" (click)="errorCls()"></button>
+                    </div>
+                    <div *ngIf="successMsg" class="alert alert-success alert-dismissible fade show" role="alert">
+                      New employee is registered successfully.
+                      <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close" (click)="errorCls()"></button>
+                    </div>
+                  </form>  
                 </div>
               </div>
             </div>
