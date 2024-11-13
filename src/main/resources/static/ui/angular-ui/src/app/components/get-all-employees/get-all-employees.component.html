@@ -7,7 +7,7 @@
               </div>
           <div class="row d-flex justify-content-center align-items-center h-100">  
             <div class="pt-1 pb-1">
-                <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" (click)="goBack()">Go Back</button>
+                <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block fa-lg gradient-custom-2 mb-3" type="button" (click)="goBack()">Register Here</button>
               </div>       
     <table class="table table-bordered" style="margin-bottom: 1100px;">
         <thead>
@@ -26,8 +26,8 @@
             <td>{{emp.email}}</td>
             <td>{{emp.phone}}</td>
             <td> 
-                <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block fa-lg gradient-custom-3" type="button">Update</button>&nbsp;                    
-                <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block fa-lg gradient-custom-4" type="button">Delete</button> 
+                <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block fa-lg gradient-custom-3" type="button" routerLink="/employee/{{emp.id}}">Update</button>&nbsp;                    
+                <button data-mdb-button-init data-mdb-ripple-init class="btn btn-primary btn-block fa-lg gradient-custom-4" type="button" (click)="deleteEmployee(emp.id)">Delete</button> 
               </td>
           </tr>
         </tbody>

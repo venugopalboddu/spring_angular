@@ -30,7 +30,6 @@ export class RegisterEmployeeComponent {
     const allFieldsFilled = Object.values(formValues).every(value => value !== null && value !== '')
     if (allFieldsFilled) {
         this.employeeService.registerEmployee(formValues).subscribe((res) => {
-            console.log('Post response', res);
             this.postEmployeeForm.reset();
             this.successMsg = true;
             this.errorMsg = false;           

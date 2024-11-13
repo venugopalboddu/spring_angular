@@ -18,8 +18,13 @@ export class GetAllEmployeesComponent {
 
   getAllEmployeeList(){
     this.employeeService.getAllEmployees().subscribe((res)=>{
-      console.log('All emps', res);
       this.employees = res;      
+    })
+  }
+
+  deleteEmployee(id: number){
+    this.employeeService.deleteEmployee(id).subscribe((res)=>{
+      this.getAllEmployeeList();
     })
   }
 
